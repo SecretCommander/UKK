@@ -1,0 +1,137 @@
+body {
+    background-image: url("../src/back.png");
+    font-family: "Nunito", "sans";
+}
+
+a {
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+a:active{
+    color:#17171F
+}
+
+.navigasi {
+    background-color: #DC3535;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 50px -10px;
+}
+
+.navigasi img {
+    width: 200px;
+    height: 65px;
+}
+
+.atas {
+    margin-top: -10px;
+}
+
+/* section */
+.judul {
+    font-family: "Nunito", "Garamond";
+    text-align: center;
+    font-weight: 350;
+
+}
+
+label {
+    display: block;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+.buttonku,
+.buttonku[type=text],
+.buttonku[type=password],
+.buttonku[type=submit],
+.buttonku[type=email] {
+    border-radius: 30px;
+    margin-bottom: 8px;
+}
+
+.buttonku,
+.buttonku[type=text],
+.buttonku[type=password],
+.buttonku[type=email] {
+    margin-top: 3px;
+    width: 100%;
+    height: 40px;
+}
+
+.form-control.buttonku:focus {
+    border-color: #CCD3CA;
+    box-shadow: 0 0 0.10rem 0.08rem;
+}
+
+.buttonku[type=submit] {
+    width: 152px;
+    background-color: #17171F;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 0.80px;
+    box-shadow: 0px 0px 10px 4px;
+}
+
+.buttonku[type=submit]:active {
+    background-color: #CCD3CA;
+}
+
+.consubmit {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.form-group,
+.form-check {
+    margin-bottom: 25px;
+}
+
+.form-check {
+    padding-left: 1.75em !important;
+    margin-top: -12px;
+    margin-bottom: 12px !important;
+    vertical-align: baseline;
+}
+
+.form-check-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.form-control.buttonku {
+    background-color: #ececec;
+    /*#E5E1DA*/
+    border: 1px solid #000000;
+}
+
+
+.form-check-input:checked[type=checkbox] {
+    border-color: #777b75;
+    background-color: #777b75;
+    box-shadow: 0 0 0.10rem 0.08rem;
+}
+
+
+.form-check input[type=checkbox] {
+    border-radius: 50%;
+    border-width: 0.50px !important;
+    border-color: #000000;
+}
+
+.formulir {
+    background-color: #F5F5FA;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px -2px;
+}
+
+.jarak {
+    margin-top: 25px;
+    margin-bottom: 0px;
+}

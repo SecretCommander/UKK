@@ -1,0 +1,506 @@
+body {
+    background-color: #F5F5FA !important;
+    font-family: "Nunito", "sans" !important;
+}
+
+
+a {
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+a:active {
+    color: #17171F
+}
+
+/* NAVIGASI */
+.navbar {
+    box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.5);
+    background-color: #DC3535;
+    height: 65px;
+}
+
+@media only screen and (max-width: 991px) {
+    .container-fluid {
+        margin-top: -17px;
+    }
+}
+
+.pas {
+    display: flex;
+    justify-content: end;
+}
+
+.pas {
+    display: flex;
+    justify-content: end;
+}
+
+.ukur {
+    width: 80%;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+}
+
+
+.page-title-container {
+    min-width: 150px;
+    cursor: pointer !important;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'poppins';
+    display: flex;
+    align-items: center;
+}
+.page-title.edit, .page-title.edit:hover{
+    text-decoration: none !important; 
+}
+
+.page-title-container.edit{
+    cursor: auto !important;
+}
+
+.page-title:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    margin-top: 0px;
+}
+
+.page-title:hover i {
+    margin-top: 0px;
+}
+
+.page-title i {
+    font-size: 1.35rem;
+    margin-top: -5px;
+    transition: margin .2s ease-in-out;
+}
+
+@media only screen and (max-width: 560px) {
+    .page-title i {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-title i {
+        font-size: 1rem;
+    }
+
+    .page-title {
+        font-weight: 600;
+    }
+}
+
+
+.profil-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 560px) {
+    .navbar {
+        height: auto;
+    }
+
+    .navbar-brand {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-brand img {
+        margin-left: 10%;
+        border-bottom: 2px solid #000000;
+    }
+
+    .page-title-container {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .page-title {
+        font-weight: 500;
+    }
+}
+
+.profil-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    background-color: #DC3535;
+    border: none;
+}
+
+.dropdown-toggle:hover {
+    cursor: pointer;
+}
+
+.dropdown-toggle,
+.dropdown-toggle.btn.show,
+.dropdown-toggle.btn:first-child:active,
+.dropdown-toggle.btn.active,
+.dropdown-toggle.btn-check:checked+.btn,
+:not(.btn-check)+.btn:active {
+    border: none !important;
+}
+
+.dropup:hover {
+    cursor: pointer !important;
+}
+
+.dropdown-menu a {
+    color: #000000;
+}
+
+.dropdown-menu a:hover {
+    background-color: #CC2424;
+    color: #FFFFFF;
+}
+
+.dropdown-toggle:hover .profil-img,
+.dropdown-toggle:active .profil-img {
+    border: 1px groove #000000 !important;
+}
+
+/* section */
+.Poppins {
+    font-family: "poppins", " Verdana, Geneva, Tahoma, sans-serif";
+    font-weight: 300;
+
+}
+
+.verdana {
+    font-family: "Helvetica", sans-serif;
+}
+
+.dropdown-menu {
+    width: 50px;
+    --bs-dropdown-min-width: 7rem !important;
+}
+
+
+/* Album */
+
+
+.foto {
+    width: 100%;
+    position: relative;
+    max-width: 260px;
+    max-height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding-top: 100%;
+    box-shadow: 0 0 10px 0 hsl(0, 0%, 0%, 15%);
+
+}
+
+.foto img {
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 260px;
+}
+
+.profile {
+    width: 100%;
+    height: auto;
+}
+
+.profile p {
+    color: #000000;
+    font-weight: 400;
+}
+
+
+@media only screen and (max-width: 575px) {
+    .foto {
+        width: 100%;
+        height: 260px;
+        max-width: none;
+        max-height: none;
+        padding-top: 0px;
+    }
+}
+
+/* floating button */
+.button {
+    border: none !important;
+}
+
+.btn-flying {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #DC3535;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-flying i {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.btn-flying:hover {
+    background-color: #CC2424;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+.hilang.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+@media only screen and (max-width: 991px) {
+    .test {
+        margin-top: 25px;
+    }
+
+    .bp.border-start,
+    .bp.border-end {
+        border: none !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2) !important;
+    }
+
+    .image-resize {
+        width: 150px;
+        height: 150px;
+        max-width: 150px;
+        height: 150px;
+
+    }
+
+    .order-md-last {
+        border-right: 2px solid rgba(0, 0, 0, 0.2) !important;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .test {
+        margin-top: 0px;
+    }
+
+    .image-resize {
+        width: 120px;
+        height: 120px;
+        max-width: 150px;
+        height: 150px;
+    }
+
+    .bp.border-start,
+    .bp.border-end {
+        border: none !important;
+        border-top: 2px solid rgba(0, 0, 0, 0.2) !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2) !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        margin-bottom: 3px !important;
+    }
+
+    .order-md-last {
+        border-right: none !important;
+    }
+
+}
+
+.hilang.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.btn.sosmed {
+    border-color: #7D0A0A;
+
+}
+
+.btn.sosmed:hover {
+    color: #fff;
+    border-color: #7D0A0A;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+}
+
+.btn.sosmed:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.125);
+}
+
+.btn.sosmed:active {
+    color: #fff;
+    /* 13131a */
+    border-color: #7D0A0A;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn.sosmed:disabled {
+    color: #fff;
+    border-color: #7D0A0A;
+}
+
+.link-underline-light {
+    text-decoration: underline !important;
+    transition: 1s;
+}
+
+.link-underline-light:hover {
+    transform: rotateY(360deg);
+}
+
+/* MODAL */
+.modal-content {
+    background-color: hsl(240, 15%, 11%, 90%) !important;
+    color: hsl(0, 0%, 100%, 95%) !important
+}
+
+.modal-content .modal-header,
+.modal-header {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.modal-content .modal-body {
+    padding-bottom: 0px;
+}
+
+.modal-content .modal-footer {
+    border-top: 0px;
+    padding-top: 0px;
+}
+
+#albumName,
+#albumDescription {
+    background-color: hsl(240, 33%, 97%, 95%);
+}
+
+.addfoto {
+    position: relative;
+    border: 3px dashed rgba(255, 0, 0, 0.837);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#gambar-preview {
+    max-width: 100%;
+    max-height: auto;
+    opacity: 0.7;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#gambar {
+    display: none;
+}
+
+.addfoto h2{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 1059px) {
+    .addfoto h2{
+        width: 100%;
+        left: 75%;
+    }
+}
+
+@media only screen and (max-width: 431px) {
+    .addfoto h2{
+        transform: translate(-25%, -50%);
+    }
+}
+
+
+.row .btn-plus {
+    background-color: #DC3535;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-plus i {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.btn-plus:hover {
+    background-color: #CC2424;
+    transform: scale(1.1);
+}
+
+.album-plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* EDIT FOTO */
+.card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body{
+    padding: 0.3rem 0px 0px 0px!important;
+}
+
+.card-title{
+    margin-bottom: 0px !important;
+}
+
+.btn-position {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+}
+
+#deskripsi{
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .card-body{
+        padding: 0.8rem 0px 0px 0px!important;
+    }
+}
