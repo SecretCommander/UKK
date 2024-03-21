@@ -27,7 +27,7 @@
                 </div>
                 <h1 class="judul">Daftar Akun</h1>
                 <form method="POST">
-                    <div class="form-group row justify-content-center flex-column">
+                    <div class="form-group row justify-content-center">
                         <div class="col-md-6">
                             <label for="NL">Nama Lengkap</label>
                             <input type="text" class="form-control buttonku" name="namaLengkap" id="NL" required>
