@@ -28,7 +28,7 @@ a:active {
     height: 65px;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 991px) {
     .navbar-brand {
         margin-top: -15px;
     }
@@ -162,6 +162,48 @@ a:active {
     box-shadow: 0 0 10px 2px hsla(0, 0%, 0%, 0.25);
     background-color: #17171F;
     color: #F0F0F5;
+}
+
+/* KALO LOGIN */
+
+.profil-img {
+    width: 40px !important; 
+    height: 40px !important; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    background-color: #DC3535;
+    border: none;
+}
+
+.dropdown-toggle,
+.dropdown-toggle.btn.show,
+.dropdown-toggle.btn:first-child:active,
+.dropdown-toggle.btn.active,
+.dropdown-toggle.btn-check:checked+.btn,
+:not(.btn-check)+.btn:active {
+    border: none !important;
+}
+
+.dropdown-menu a {
+    color: #000000;
+}
+
+.dropdown-menu a:hover {
+    background-color: #CC2424;
+    color: #FFFFFF;
+}
+
+.dropdown-toggle:hover .profil-img,
+.dropdown-toggle:active .profil-img {
+    border: 1px groove #000000 !important;
 }
 
 
@@ -389,6 +431,10 @@ a:active {
 .hilang.row {
     margin-left: 0px;
     margin-right: 0px;
+}
+
+section .hilang {
+    min-height: 300px !important;
 }
 
 .btn.sosmed {

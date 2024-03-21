@@ -1,3 +1,38 @@
+<?php
+require('function.php');
+// session_start();
+
+
+if(isset($_SESSION['id_user'])){
+    header('Location: index.php');
+    exit();
+}
+
+// Check apakah Remember
+if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
+    $cookieUsername = mysqli_real_escape_string($conn, $_COOKIE['username']);
+    $cookiePassword = mysqli_real_escape_string($conn, $_COOKIE['password']);
+
+    $query = "SELECT * FROM user WHERE username='$cookieUsername' AND password='$cookiePassword'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+        $_SESSION['id_user'] = $user['userid'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['password'] = $user['password'];
+
+        header('Location: index.php');
+        exit();
+    }
+}
+
+
+
+
+
+user_data();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,16 +63,16 @@
                 <h1 class="judul">Selamat Datang!</h1>
                 <form method="POST">
                     <div class="form-group">
-                        <label for="NL">Nama Lengkap</label>
-                        <input type="text" class="buttonku form-control" name="namaLengkap" id="NL" required>
+                        <label for="UN">Username</label>
+                        <input type="text" class="buttonku form-control" name="username" id="UN" required>
                     </div>
                     <div class="form-group">
                         <label for="PW">Kata Sandi</label>
                         <input type="password" class="form-control buttonku" name="password" id="PW" required>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" class="form-check-input" name="check" id="RM" required>
-                        <label for="RM" class="form-check-label">Remember Me</label>
+                        <input type="checkbox" class="form-check-input" name="check" id="RM">
+                        <label for="RM" class="form-check-label">Ingat Saya</label>
                     </div>
                     <div class="d-flex justify-content-center consubmit">
                         <input type="submit" class="btn-block buttonku" value="Masuk">

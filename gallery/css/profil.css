@@ -126,13 +126,75 @@ body {
 }
 
 
+
+
+.btn.submit {
+    border: 1px solid #E3E1D9;
+    border-radius: 0px 20px 20px 0px;
+    background-color: #E3E1D9;
+}
+
+.btn.submit:hover {
+    border-color: #E3E1D9;
+    background-color: #F0F0F5;
+    transform: scale(1.05)
+}
+
+.btn.submit:active {
+    border-color: #E3E1D9 !important;
+    background-color: #F0F0F5 !important;
+    transform: scale(1.05)
+}
+
+.linkan {
+    margin-right: 10px;
+}
+
+.btn.linkan:hover {
+    background-color: #CCD3CA;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.btn.linkan:active,
+.linkan.masuk:active,
+.linkan.daftar:active {
+    background-color: #CCD3CA !important;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.btn.linkan {
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.linkan.masuk {
+    box-shadow: 0 0 10px 2px hsla(0, 0%, 0%, 0.25);
+    background-color: #F5F5FA;
+    color: #000000;
+}
+
+.linkan.daftar {
+    box-shadow: 0 0 10px 2px hsla(0, 0%, 0%, 0.25);
+    background-color: #17171F;
+    color: #F0F0F5;
+}
+
+@media only screen and (max-width: 400px) {
+    .linkan.daftar {
+        display: none;
+    }
+}
+
+
+
+
 .profil-img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 565px) {
     .navbar {
         height: auto;
     }
@@ -156,6 +218,10 @@ body {
 
     .page-title {
         font-weight: 500;
+    }
+
+    .btn.linkan{
+    padding: 0.2rem 0.5rem;
     }
 }
 
@@ -257,7 +323,8 @@ body {
 }
 
 #albumName,
-#albumDescription {
+#albumDescription,
+#EM {
     background-color: hsl(240, 33%, 97%, 95%);
 }
 

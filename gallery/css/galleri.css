@@ -59,11 +59,13 @@ a:active {
     display: flex;
     align-items: center;
 }
-.page-title.edit, .page-title.edit:hover{
-    text-decoration: none !important; 
+
+.page-title.edit,
+.page-title.edit:hover {
+    text-decoration: none !important;
 }
 
-.page-title-container.edit{
+.page-title-container.edit {
     cursor: auto !important;
 }
 
@@ -338,6 +340,10 @@ a:active {
     margin-right: 0px;
 }
 
+section .hilang {
+    min-height: 500px !important;
+}
+
 .btn.sosmed {
     border-color: #7D0A0A;
 
@@ -398,8 +404,17 @@ a:active {
 }
 
 #albumName,
-#albumDescription {
+#albumDescription,
+#albumKategori {
     background-color: hsl(240, 33%, 97%, 95%);
+}
+
+select.form-select option {
+    border-radius: 10px !important;
+}
+
+select.form-select option:hover {
+    background-color: #CC2424;
 }
 
 .addfoto {
@@ -421,7 +436,7 @@ a:active {
     display: none;
 }
 
-.addfoto h2{
+.addfoto h2 {
     position: absolute;
     z-index: 3;
     top: 50%;
@@ -430,14 +445,14 @@ a:active {
 }
 
 @media only screen and (min-width: 1059px) {
-    .addfoto h2{
+    .addfoto h2 {
         width: 100%;
         left: 75%;
     }
 }
 
 @media only screen and (max-width: 431px) {
-    .addfoto h2{
+    .addfoto h2 {
         transform: translate(-25%, -50%);
     }
 }
@@ -468,11 +483,11 @@ a:active {
 .album-plus {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 8% !important;
 }
 
 /* EDIT FOTO */
-.card{
+.card {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -481,11 +496,11 @@ a:active {
     height: auto;
 }
 
-.card-body{
-    padding: 0.3rem 0px 0px 0px!important;
+.card-body {
+    padding: 0.3rem 0px 0px 0px !important;
 }
 
-.card-title{
+.card-title {
     margin-bottom: 0px !important;
 }
 
@@ -495,12 +510,12 @@ a:active {
     margin-top: 1.5rem;
 }
 
-#deskripsi{
+#deskripsi, #kat, #alb {
     margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 767px) {
-    .card-body{
-        padding: 0.8rem 0px 0px 0px!important;
+    .card-body {
+        padding: 0.8rem 0px 0px 0px !important;
     }
 }

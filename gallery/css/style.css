@@ -103,6 +103,8 @@ label {
 .form-check-label {
     font-size: 0.75rem;
     font-weight: 500;
+    position: relative;
+    top: -2px;
 }
 
 .form-control.buttonku {

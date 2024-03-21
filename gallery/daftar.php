@@ -1,3 +1,34 @@
+<?php
+require 'function.php';
+
+// session_start();
+
+if(isset($_SESSION['id_user'])){
+    header('Location: index.php');
+    exit();
+}
+
+// Check apakah Remember
+if (isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
+    $cookieUsername = mysqli_real_escape_string($conn, $_COOKIE['username']);
+    $cookiePassword = mysqli_real_escape_string($conn, $_COOKIE['password']);
+
+    $query = "SELECT * FROM user WHERE username='$cookieUsername' AND password='$cookiePassword'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $user = mysqli_fetch_assoc($result);
+        $_SESSION['id_user'] = $user['userid'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['password'] = $user['password'];
+
+        header('Location: index.php');
+        exit();
+    }
+}
+
+regist();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,15 +57,15 @@
                     <img src="src/Camera.png" alt="kamera">
                 </div>
                 <h1 class="judul">Daftar Akun</h1>
-                <form method="POST">
+                <form method="POST" autocomplete="off" onsubmit="return checkPassword() && validasiEmail();">
                     <div class="form-group row justify-content-center">
                         <div class="col-md-6">
                             <label for="NL">Nama Lengkap</label>
-                            <input type="text" class="form-control buttonku" name="namaLengkap" id="NL" required>
+                            <input type="text" class="form-control buttonku" name="namaAnda" id="UN" required>
                         </div>
                         <div class="col-md-6">
                             <label for="NA">Nama Anda</label>
-                            <input type="text" class="form-control buttonku" name="namaAnda" id="NA" required>
+                            <input type="text" class="form-control buttonku" name="username" id="NA" required>
                         </div>
                     </div>
 
@@ -46,7 +77,7 @@
 
                         <div class="col-md-6 ">
                             <label for="AL" class="text-center">Alamat</label>
-                            <input type="text" class="form-control buttonku" name="Alamat" id="AL" required>
+                            <input type="text" class="form-control buttonku" name="alamat" id="AL" required>
                         </div>
                     </div>
 
@@ -57,11 +88,11 @@
                         </div>
                         <div class="col-md-6">
                             <label for="KPW">Konfirmasi Sandi</label>
-                            <input type="password" class="form-control buttonku" name="password" id="KPW" required>
+                            <input type="password" class="form-control buttonku" id="KPW" required>
                         </div>
                     </div>
 
-                    
+
                     <div class="d-flex justify-content-center consubmit">
                         <input type="submit" class="btn-block buttonku" value="Daftar">
                     </div>
@@ -69,6 +100,38 @@
             </div>
         </div>
     </section>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("PW").value;
+            const confirmPassword = document.getElementById("KPW").value;
+
+            if (password.length < 8) {
+                alert('Kata sandi minimal 8 karakter');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Kata sandi tidak cocok. Silakan coba lagi.");
+                return false;
+            }
+            return true;
+        }
+
+
+        function validasiEmail() {
+            const email = document.getElementById('EM').value;
+            const emailVerify = (input) => {
+                const regex = /^[a-z0-9_]+@[a-z]{3,}\.[a-z\.]{3,}$/;
+                return regex.test(input);
+            };
+            if (!emailVerify(email)) {
+                alert('Format email tidak valid');
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 
 </html>
