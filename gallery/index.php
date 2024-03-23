@@ -66,7 +66,7 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
             <div class="carousel-cell" style="background-image: url(src/3.jpg)"></div>
         </div>
         <h1 class="text-center mt-5 mb-2 ">Kategori</h1>
-        <div class="hilang row justify-content-center p-4 g-3 template ">
+        <div class="row justify-content-center p-4 g-3 template ">
             <div class="col-lg-3 col-sm-6 d-flex justify-content-center">
                 <div class="link-kategori">
                     <a href="kategori.php?kat=santai">
@@ -102,7 +102,7 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
         </div>
         <!-- FOTO FOTO -->
         <h2 class="text-center mb-4">Gambar</h2>
-        <div class="hilang row px-4 gy-4">
+        <div class="row px-4 gy-4">
 
             <?php
             $gambar_result = gambar_index();

@@ -73,19 +73,19 @@ update_gambar();
                             <div class="card-body">
                                 <form method="post">
                                     <input type="hidden" name="id" value="<?= $gambar['fotoid'] ?>">
-                                    <input type="hidden" name="albumid" value="<?= $gambar['albumid'] ?>">
+                                    <!-- <input type="hidden" name="albumid" value="<?php //$gambar['albumid'] ?>"> -->
                                     <label for="judul" class="form-label">Judul Gambar</label>
                                     <input type="text" value="<?= $gambar['judul_foto'] ?>" class="form-control" id="judul" name="judul">
 
-                                    <!-- <label for="album" class="form-label" id="alb">Album (*jika ingin*)</label>
-                                    <?php /*if ($albums->num_rows > 0) { ?>
+                                    <label for="album" class="form-label" id="alb">Album (*jika ingin*)</label>
+                                    <?php if ($albums->num_rows > 0) { ?>
                                         <select name="albumid" class="form-select">
                                             <?php while ($album = $albums->fetch_assoc()) {
                                                 $selected = ($album["albumid"] == $gambar['albumid']) ? 'selected' : ''; ?>
                                                 <option value="<?= $album['albumid'] ?>" <?= $selected ?>><?= $album['nama_album'] ?></option>
                                         <?php }
-                                        } */?>
-                                        </select> -->
+                                        } ?>
+                                        </select>
 
                                         <label for="album" class="form-label" id="kat">Kategori</label>
                                         <select id="album" class="form-select" aria-label="kategori gambar" name="kategori" required>

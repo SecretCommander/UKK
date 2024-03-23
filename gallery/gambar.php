@@ -106,9 +106,12 @@ $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
                                                 $komentar = komentar_show_user(trim($_GET['gambar']), $_SESSION['id_user']);
 
                                                 while ($komenU = mysqli_fetch_assoc($komentar)) { ?>
-                                                    <p class="user-comment my-2"><span><span class="fw-bold"><?= $komenU['username'] ?></span><span class="fw-normal"> <?= $komenU['isi_komentar'] ?></span></span>
+                                                    <p class="user-comment my-2">
+                                                        <span><span class="fw-bold"><?= $komenU['username'] ?></span><span class="fw-normal"> <?= $komenU['isi_komentar'] ?></span></span>
                                                         <a href="delete_komen.php?id=<?= $komenU['komentarid'] ?>&gambar=<?= trim($_GET['gambar']) ?>" style="color:black"><i class="me-2 bi bi-trash3"></i></a>
-                                                    </p><?php }
+                                                        <!-- <p>//date('d-m-Y', strtotime($komenU['tanggal_komentar'])) ></p> -->
+                                                    </p>
+                                                    <?php }
                                                 } ?>
 
                                             <?php
@@ -120,10 +123,6 @@ $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
 
                                             while ($komen = mysqli_fetch_assoc($komentar)) { ?>
                                                 <p class="user-comment my-2"><span><span class="fw-bold"><?= $komen['username'] ?></span><span class="fw-normal"> <?= $komen['isi_komentar'] ?></span></span></p><?php } ?>
-                                            <p class="user-comment my-2"><span><span class="fw-bold">Kamu</span><span class="fw-normal"> Temenan aja!!</span></span></p>
-                                            <p class="user-comment my-2"><span><span class="fw-bold">Kamu</span><span class="fw-normal"> Temenan aja!!</span></span></p>
-                                            <p class="user-comment my-2"><span><span class="fw-bold">Kamu</span><span class="fw-normal"> Temenan aja!!</span></span></p>
-                                            <p class="user-comment my-2"><span><span class="fw-bold">Kamu</span><span class="fw-normal"> Temenan aja!!</span></span></p>
                                         </div>
                                     </div>
                                     <div class="btn-position">

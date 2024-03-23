@@ -64,7 +64,7 @@ if (!isset($_GET['kat'])) {
 
     <section>
         <h2 class="text-center mt-4 mb-2" id="kategori-text">Kategori</h2>
-        <div class="hilang row justify-content-center p-4 g-3 template ">
+        <div class=" row justify-content-center p-4 g-3 template ">
             <div class="col-lg-3 col-sm-6 d-flex justify-content-center">
                 <div class="link-kategori">
                     <a href="kategori.php?kat=santai">

@@ -592,28 +592,28 @@ function update_gambar()
         $deskripsi   = mysqli_real_escape_string($conn, $_POST['deskripsi']);
         $kategori    = mysqli_real_escape_string($conn, $_POST['kategori']);
         
-        //kalo kategori bisa pilih
-        // $sql = "SELECT lokasi_file FROM foto WHERE fotoid = ?";
-        // $stmt = $conn->prepare($sql);
-        // $stmt->bind_param("i", $id);
-        // $stmt->execute();
-        // $result = $stmt->get_result();
-        // $row = $result->fetch_assoc();
+        // kalo kategori bisa pilih
+        $sql = "SELECT lokasi_file FROM foto WHERE fotoid = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
 
-        // $edit_album = mysqli_query($conn, "SELECT nama_album FROM album WHERE albumid = $album");
-        // $hasil = mysqli_fetch_assoc($edit_album);
+        $edit_album = mysqli_query($conn, "SELECT nama_album FROM album WHERE albumid = $album");
+        $hasil = mysqli_fetch_assoc($edit_album);
 
         
 
-        // $newDirectory = 'album/'.trim($_SESSION['id_user']).'/'.$hasil['nama_album']; 
-        // $lokasidb = trim($_SESSION['id_user']).'/'.$hasil['nama_album'];
-        // $filePath = 'album/'.$row['lokasi_file']; // Ganti dengan ekstensi file yang sesuai (contoh: .jpg)
+        $newDirectory = 'album/'.trim($_SESSION['id_user']).'/'.$hasil['nama_album']; 
+        $lokasidb = trim($_SESSION['id_user']).'/'.$hasil['nama_album'];
+        $filePath = 'album/'.$row['lokasi_file']; // Ganti dengan ekstensi file yang sesuai (contoh: .jpg)
     
-        // // Memindahkan file ke direktori baru
-        // $lokasi = moveFileToAlbum($filePath, $newDirectory, $lokasidb);
+        // Memindahkan file ke direktori baru
+        $lokasi = moveFileToAlbum($filePath, $newDirectory, $lokasidb);
 
 
-
+            //edit gambarnya
         // $queryShow = "SELECT * FROM foto WHERE foto = ?";
         // $stmtShow = $conn->prepare($queryShow);
         // $stmtShow->bind_param("i", $id);
@@ -636,9 +636,9 @@ function update_gambar()
         // }
 
         // SOURCE : $lokasi , $album,  lokasi_file=?, albumid=?
-        $sql = "UPDATE foto SET judul_foto=?, deskripsi_foto=?, kategori=? WHERE fotoid=?";
+        $sql = "UPDATE foto SET judul_foto=?, deskripsi_foto=?, kategori=?, lokasi_file=?, albumid=? WHERE fotoid=?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssi", $judul, $deskripsi, $kategori, $id);
+        $stmt->bind_param("ssssii", $judul, $deskripsi, $kategori,$lokasi, $album, $id);
 
         try {
             $stmt->execute();
@@ -654,6 +654,16 @@ function delete_gambar()
 {
     $idg = $_GET["id"];
     global $conn;
+
+    $stmt_delete_komentar = $conn->prepare("DELETE FROM komentar WHERE fotoid = ?");
+    $stmt_delete_komentar->bind_param("i", $idg);
+    $stmt_delete_komentar->execute();
+    $stmt_delete_komentar->close();
+
+    $stmt_delete_like = $conn->prepare("DELETE FROM likefoto WHERE fotoid = ?");
+    $stmt_delete_like->bind_param("i", $idg);
+    $stmt_delete_like->execute();
+    $stmt_delete_like->close();
 
     $queryShow = "SELECT lokasi_file FROM foto where fotoid = ?;";
     $stmt = $conn->prepare($queryShow);
