@@ -97,7 +97,7 @@ $user = all_gambar(trim($_GET['user']));
         <footer class="text-center text-lg-start" style="background-color: #DC3535;">
             <div class="text-center text-white p-3" style="background-color: #DC3535;">
                 Copyright©:
-                <a class="text-white" href="">Farrel Corp. 2024</a>
+                <a class="text-white" href="https://www.instagram.com/farrel_fff?igsh=bG5qMm91NTZsOXA4">Farrel Corp. 2024</a>
             </div>
         </footer>
     </div>

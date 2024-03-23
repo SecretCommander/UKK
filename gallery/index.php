@@ -145,7 +145,7 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
                 <!-- Main Content -->
                 <div class="col-lg-7 col-md-12 text-center my-auto bp border-start  border-end border-dark ">
                     <div class="d-flex flex-column align-items-center test">
-                        <a href="" class="link-underline-light">
+                        <a href="daftar.php" class="link-underline-light">
                             <h5 class="text-white mb-3">Ayo Bergabung!</h5>
                         </a>
                         <h3 class="text-white mb-4">Berbagi Gambar / Memori Kepada Dunia</h3>
@@ -155,22 +155,28 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
                 <div class="col-lg-3 text-center my-auto col-md-6 col-sm-6 order-md-last order-sm-last ">
                     <h3 class="text-white my-2">Ikuti Kami!</h3>
                     <div class="d-flex justify-content-center align-items-center py-3">
-                        <button type="button" class="btn sosmed btn-lg btn-floating mx-2" style="background-color: #A94438;">
-                            <i class="bi bi-facebook"></i>
-                        </button>
-                        <button type="button" class="btn sosmed btn-lg btn-floating mx-2" style="background-color: #A94438;">
-                            <i class="bi bi-instagram"></i>
-                        </button>
-                        <button type="button" class="btn sosmed btn-lg btn-floating mx-2" style="background-color: #A94438;">
-                            <i class="bi bi-twitter"></i>
-                        </button>
+                        <a href="https://www.facebook.com/farrel.awaly">
+                            <button type="button" class="btn sosmed btn-lg btn-floating mx-2" style="background-color: #A94438;">
+                                <i class="bi bi-facebook"></i>
+                            </button>
+                        </a>
+                        <a href="https://www.instagram.com/farrel_fff?igsh=bG5qMm91NTZsOXA4">
+                            <button type="button" class="btn sosmed btn-lg btn-floating mx-2" style="background-color: #A94438;">
+                                <i class="bi bi-instagram"></i>
+                            </button>
+                        </a>
+                        <a href="https://twitter.com/SecretManThing">
+                            <button type="button" class="btn sosmed btn-lg btn-floating mx-2" style="background-color: #A94438;">
+                                <i class="bi bi-twitter"></i>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
             <!-- Copyright -->
             <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 Copyright©:
-                <a class="text-white" href="">Farrel Corp. 2024</a>
+                <a class="text-white" href="https://www.instagram.com/farrel_fff?igsh=bG5qMm91NTZsOXA4">Farrel Corp. 2024</a>
             </div>
             <!-- Copyright -->
         </footer>
