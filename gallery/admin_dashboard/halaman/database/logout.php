@@ -4,7 +4,7 @@ unset($_SESSION['admin_id']);
 unset($_SESSION['username']);
 unset($_SESSION['password']);
 unset($_SESSION['levelA']);
-session_destroy();
+
 
 // if (isset($_COOKIE['username'])) {
 //     unset($_COOKIE['id_user']);

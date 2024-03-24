@@ -64,7 +64,7 @@ regist();
                             <input type="text" class="form-control buttonku" name="namaAnda" id="UN" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="NA">Nama Anda</label>
+                            <label for="NA">Username</label>
                             <input type="text" class="form-control buttonku" name="username" id="NA" required>
                         </div>
                     </div>

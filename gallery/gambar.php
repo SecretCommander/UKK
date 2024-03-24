@@ -7,6 +7,7 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
 }
 
 $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
+$ada = mysqli_num_rows(komentar_show(trim($_GET['gambar']), 0));
 
 ?>
 <!DOCTYPE html>
@@ -102,6 +103,12 @@ $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
                                     <div class="collapse comment-section" id="comments">
                                         <div class="komments">
                                             <?php
+                                            if ($ada <= 0) { ?>
+                                                <p> Belum ada komentar.</p>
+                                            <?php
+                                            }
+                                            ?>
+                                            <?php
                                             if (isset($_SESSION['id_user']) && $_SESSION['id_user'] != '') {
                                                 $komentar = komentar_show_user(trim($_GET['gambar']), $_SESSION['id_user']);
 
@@ -111,8 +118,8 @@ $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
                                                         <a href="delete_komen.php?id=<?= $komenU['komentarid'] ?>&gambar=<?= trim($_GET['gambar']) ?>" style="color:black"><i class="me-2 bi bi-trash3"></i></a>
                                                         <!-- <p>//date('d-m-Y', strtotime($komenU['tanggal_komentar'])) ></p> -->
                                                     </p>
-                                                    <?php }
-                                                } ?>
+                                            <?php }
+                                            } ?>
 
                                             <?php
                                             if (isset($_SESSION['id_user'])) {

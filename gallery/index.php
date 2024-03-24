@@ -145,10 +145,12 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
                 <!-- Main Content -->
                 <div class="col-lg-7 col-md-12 text-center my-auto bp border-start  border-end border-dark ">
                     <div class="d-flex flex-column align-items-center test">
+                    <?php if (empty($_SESSION['id_user'])){ ?>
                         <a href="daftar.php" class="link-underline-light">
                             <h5 class="text-white mb-3">Ayo Bergabung!</h5>
                         </a>
-                        <h3 class="text-white mb-4">Berbagi Gambar / Memori Kepada Dunia</h3>
+                        <?php } ?>
+                        <h3 class="text-white <?php echo empty($_SESSION['id_user']) ? 'mb-4' : 'mb-1'; ?>">Berbagi Gambar / Memori Kepada Dunia</h3>
                     </div>
                 </div>
                 <!-- Social Media Buttons -->

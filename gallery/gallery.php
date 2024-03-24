@@ -79,7 +79,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-lg-3 col-sm-3 col-xl-2 foto-image">
                     <div class="foto">
-                        <img src="album/<?= $row['lokasi_file'] ?>" alt="">
+                        <a href="edit.php?id=<?= $row['fotoid'] ?>">
+                            <img src="album/<?= $row['lokasi_file'] ?>" alt="">
+                        </a>
                     </div>
                     <div class="profile d-flex p-2 ps-1">
                         <p class="ms-1"><?= $row['judul_foto'] ?></p>

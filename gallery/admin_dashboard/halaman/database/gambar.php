@@ -35,7 +35,7 @@ $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
 <body>
     <nav class="navbar navigasi navbar-expand-lg">
         <div class="container-fluid d-flex flex-nowrap justify-content-center">
-            <a class="navbar-brand fw-bold fs-2" href="gambar-datalist.php" >Admin </a>
+            <a class="navbar-brand fw-bold fs-2" href="gambar-datalist.php">Admin </a>
         </div>
     </nav>
 
@@ -63,6 +63,12 @@ $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
                                     </div>
                                     <div class="collapse comment-section" id="comments">
                                         <div class="komments">
+                                            <?php
+                                            if ($ada <= 0) { ?>
+                                                <p> Belum ada komentar.</p>
+                                            <?php
+                                            }
+                                            ?>
                                             <?php
                                             if (isset($_SESSION['id_user'])) {
                                                 $komentar = komentar_show(trim($_GET['gambar']), $_SESSION['id_user']);
