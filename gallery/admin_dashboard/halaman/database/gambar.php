@@ -7,6 +7,7 @@ require('functionGambar.php');
 // }
 
 $gambar = mysqli_fetch_assoc(detail_gambar_viewer(trim($_GET['gambar'])));
+$ada = mysqli_num_rows(komentar_show(trim($_GET['gambar']), 0));
 
 ?>
 <!DOCTYPE html>

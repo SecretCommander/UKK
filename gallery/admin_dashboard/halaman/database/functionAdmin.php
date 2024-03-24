@@ -47,7 +47,7 @@ function update()
         try {
             mysqli_query($conn, $sql);
             echo "<script>alert('Data yang anda Update sukses');window.location='tampil_data.php'</script>";
-        } catch (mysqli_sql_exception) {
+        } catch (mysqli_sql_exception $e) {
             return "Update Failed";
         }
     }

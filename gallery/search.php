@@ -66,7 +66,7 @@ if (isset($_POST['search'])) {
 
     <section>
         <h2 class="text-center mt-4 mb-2" id="kategori-text">Kategori</h2>
-        <div class="row justify-content-center p-4 g-3 template ">
+        <div class="margin-custom row justify-content-center p-4 g-3 template ">
             <div class="col-lg-3 col-sm-6 d-flex justify-content-center">
                 <div class="link-kategori">
                     <a href="kategori.php?kat=santai">
@@ -102,7 +102,7 @@ if (isset($_POST['search'])) {
         </div>
         <!-- FOTO FOTO -->
         <h2 class="text-center mb-4">Hasil pencarian untuk "<b><?= $key ?></b>"</h2>
-        <div class="hilang row px-4 gy-4">
+        <div class="hilang margin-custom row px-4 gy-4">
             <?php
             $gambar_result = search($key);
             while ($gambar = mysqli_fetch_assoc($gambar_result)) { ?>
@@ -136,7 +136,7 @@ if (isset($_POST['search'])) {
     <div class="mt-5">
         <footer class="text-center text-lg-start" style="background-color: #DC3535;">
             <?php if (empty($_SESSION['id_user'])) { ?>
-                <div class="hilang row px-1">
+                <div class="hilang margin-custom row px-1">
                     <!-- Logo -->
                     <div class="col-lg-2 col-md-6 col-sm-6 order-md-last order-sm-last order-lg-first ">
                         <img src="src/memorize.png" alt="logo memorize" class="img-fluid image-resize">

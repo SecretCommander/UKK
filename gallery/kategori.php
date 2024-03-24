@@ -64,7 +64,7 @@ if (!isset($_GET['kat'])) {
 
     <section>
         <h2 class="text-center mt-4 mb-2" id="kategori-text">Kategori</h2>
-        <div class=" row justify-content-center p-4 g-3 template ">
+        <div class="margin-custom row justify-content-center p-4 g-3 template ">
             <div class="col-lg-3 col-sm-6 d-flex justify-content-center">
                 <div class="link-kategori">
                     <a href="kategori.php?kat=santai">
@@ -100,7 +100,7 @@ if (!isset($_GET['kat'])) {
         </div>
         <!-- FOTO FOTO -->
         <h2 class="text-center mb-4">Gambar "<b><?= ucfirst($_GET['kat']) ?></b>"</h2>
-        <div class="hilang row px-4 gy-4">
+        <div class="hilang margin-custom row px-4 gy-4">
             <?php
             $gambar_result = kategori($_GET['kat']);
             while ($gambar = mysqli_fetch_assoc($gambar_result)) { ?>
@@ -134,7 +134,7 @@ if (!isset($_GET['kat'])) {
     <div class="mt-5">
         <footer class="text-center text-lg-start" style="background-color: #DC3535;">
         <?php if (empty($_SESSION['id_user'])){ ?>
-            <div class="hilang row px-1">
+            <div class="margin-custom row px-1">
                 <!-- Logo -->
                 <div class="col-lg-2 col-md-6 col-sm-6 order-md-last order-sm-last order-lg-first ">
                     <img src="src/memorize.png" alt="logo memorize" class="img-fluid image-resize">

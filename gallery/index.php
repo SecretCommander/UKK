@@ -66,7 +66,7 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
             <div class="carousel-cell" style="background-image: url(src/3.jpg)"></div>
         </div>
         <h1 class="text-center mt-5 mb-2 ">Kategori</h1>
-        <div class="row justify-content-center p-4 g-3 template ">
+        <div class="margin-custom row justify-content-center p-4 g-3 template ">
             <div class="col-lg-3 col-sm-6 d-flex justify-content-center">
                 <div class="link-kategori">
                     <a href="kategori.php?kat=santai">
@@ -102,7 +102,7 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
         </div>
         <!-- FOTO FOTO -->
         <h2 class="text-center mb-4">Gambar</h2>
-        <div class="row px-4 gy-4">
+        <div class="margin-custom row px-4 gy-4">
 
             <?php
             $gambar_result = gambar_index();
@@ -137,7 +137,7 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
     </section>
     <div class="mt-5">
         <footer class="text-center text-lg-start" style="background-color: #DC3535;">
-            <div class="hilang row px-1">
+            <div class="margin-custom row px-1">
                 <!-- Logo -->
                 <div class="col-lg-2 col-md-6 col-sm-6 order-md-last order-sm-last order-lg-first ">
                     <img src="src/memorize.png" alt="logo memorize" class="img-fluid image-resize">
@@ -145,10 +145,10 @@ if (isset($_SESSION['id_user']) && detail_data_user(trim($_SESSION['id_user'])))
                 <!-- Main Content -->
                 <div class="col-lg-7 col-md-12 text-center my-auto bp border-start  border-end border-dark ">
                     <div class="d-flex flex-column align-items-center test">
-                    <?php if (empty($_SESSION['id_user'])){ ?>
-                        <a href="daftar.php" class="link-underline-light">
-                            <h5 class="text-white mb-3">Ayo Bergabung!</h5>
-                        </a>
+                        <?php if (empty($_SESSION['id_user'])) { ?>
+                            <a href="daftar.php" class="link-underline-light">
+                                <h5 class="text-white mb-3">Ayo Bergabung!</h5>
+                            </a>
                         <?php } ?>
                         <h3 class="text-white <?php echo empty($_SESSION['id_user']) ? 'mb-4' : 'mb-1'; ?>">Berbagi Gambar / Memori Kepada Dunia</h3>
                     </div>
